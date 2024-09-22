@@ -1,1 +1,1 @@
-# grid-art-dev
+# Grid art

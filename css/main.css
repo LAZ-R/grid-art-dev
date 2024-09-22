@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --cell-width: 1px;
+  --cell-height: 1px;
+}
+
+html, body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  min-width: 100svw; width: 100svw; max-width: 100svw;
+  min-height: 100svh; height: 100svh; max-height: 100svh;
+  background-color: black;
+  overflow: hidden;
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-width: 100svw; width: 100svw; max-width: 100svw;
+    min-height: 100svh; height: 100svh; max-height: 100svh;
+    background-color: black;
+    transition: opacity .2s linear;
+
+    .row {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      min-width: 100svw; width: 100svw; max-width: 100svw;
+      min-height: var(--cell-height); height: var(--cell-height); max-height: var(--cell-height);
+    }
+
+    .cell {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: var(--cell-width); width: var(--cell-width); max-width: var(--cell-width);
+      min-height: var(--cell-height); height: var(--cell-height); max-height: var(--cell-height);
+      /* border: 1px solid white; */
+      transition: background-color .5s linear;
+      /* border-radius: 500px; */
+      filter: grayscale(.7) sepia(.2);
+    }
+  }
+}
